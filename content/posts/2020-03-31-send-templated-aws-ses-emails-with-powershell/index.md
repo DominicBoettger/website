@@ -1,27 +1,28 @@
 ---
-title: Send templated AWS SES emails with Powershell  
-author: Dominic Böttger 
-date: 2020-03-31
+title: Send templated AWS SES emails with PowerShell
+author: Dominic Böttger
+date: 2020-03-31T00:00:00.000Z
+excerpt: >-
+  A brief description on how a SES mail template can be stored and send with the
+  AWS (Amazon Web Services) Powershell module.
 hero: ./images/hero.jpg
-excerpt: A short description on how a SES mail template can be stored and send with the AWS (Amazon Web Services) Powershell module.
 ---
+There is a lot of documentation and examples for the Amazon Web Services cli tools but there are less examples for the AWS PowerShell module. I had the problem that I did not find a working example to send emails via AWS SES and had to find a solution by myself. I hope the following post will save your time.
 
-There is a lot of documentation and examples for the Amazon Web Services cli tools but there are less examples for the AWS Powershell module. I had the problem that I did not find a working example to send emails via AWS SES and had to find a solution by myself. I hope the following post will save your time.
+I assume that you already have the PowerShell tools installed and your AWS credentials have been set up.
 
-I assume that you already have the Powershell tools installed and your AWS credentials have been set up.
-
-As I already had the AWS cli installed my credentials were already stored and I just had to install and load the powershell module.
+As I already had the AWS cli installed my credentials were already stored and I just had to install and load the PowerShell module.
 
 ```powershell
 Install-Module -Name AWSPowerShell.NetCore
 Import-Module AWSPowerShell.NetCore
 ```
 
-If you need to install it differently or further informatins on how to set up the credentials you should have a look at the offical [AWS Powershell tools documentation](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-welcome.html)
+If you need to install it differently or further information on how to set up the credentials you should have a look at the official [AWS PowerShell tools documentation](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-welcome.html)
 
 ## Creating and storing the template
 
-First I created a json file for the template and saved the contents below as mytemplate.json.
+First, I created a json file for the template and saved the contents below as mytemplate.json.
 
 ```json
 {
@@ -37,7 +38,7 @@ Español üäü {{name}}</body> </html>",
 }
 ```
 
-To load the template into the SES template store the content of the json needs to be loaded ( Unicode is important! ), converted from json to a object and then piped to the New-SesTemplate CmdLet.
+To load the template into the SES template store the content of the json needs to be loaded (Unicode is important! ), converted from json to an object and then piped to the New-SesTemplate CmdLet.
 
 ```powershell
 Get-Content -Path ./mytemplate.json -Encoding UTF-8 | convertFrom-Json | New-SesTemplate
@@ -58,7 +59,7 @@ For this you should save the contents below in a file named myemail.json.
 }
 ```
 
-The json needs to be adjusted to fulfill your needs. Which means especially the mail adresses should be replaced to align with your SES and domain configuration.
+The json needs to be adjusted to fulfill your needs. Which means especially the mail addresses should be replaced to align with your SES and domain configuration.
 
 To send the mail you just need to execute the code below.
 
@@ -66,4 +67,4 @@ To send the mail you just need to execute the code below.
  Get-Content -Path ../myemail.json -Encoding UTF-8 | convertFrom-JSON | Send-SESTemplatedEmail
 ```
 
-**Congratulations for delivering your email via SES with Powershell! :-)**
+**Congratulations for delivering your email via SES with PowerShell! 👍**
