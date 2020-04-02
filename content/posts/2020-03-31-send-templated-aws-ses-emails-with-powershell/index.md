@@ -3,7 +3,7 @@ title: Send templated AWS SES emails with PowerShell
 author: Dominic Böttger
 date: 2020-03-31T00:00:00.000Z
 excerpt: >-
-  A short description on how a SES mail template can be stored and send with the
+  A brief description on how a SES mail template can be stored and send with the
   AWS (Amazon Web Services) Powershell module.
 hero: ./images/hero.jpg
 ---
