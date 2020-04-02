@@ -1,11 +1,12 @@
 ---
-title: Send templated AWS SES emails with Powershell  
-author: Dominic Böttger 
-date: 2020-03-31
+title: Send templated AWS SES emails with Powershell
+author: Dominic Böttger
+date: 2020-03-31T00:00:00.000Z
+excerpt: >-
+  A short description on how a SES mail template can be stored and send with the
+  AWS (Amazon Web Services) Powershell module.
 hero: ./images/hero.jpg
-excerpt: A short description on how a SES mail template can be stored and send with the AWS (Amazon Web Services) Powershell module.
 ---
-
 There is a lot of documentation and examples for the Amazon Web Services cli tools but there are less examples for the AWS Powershell module. I had the problem that I did not find a working example to send emails via AWS SES and had to find a solution by myself. I hope the following post will save your time.
 
 I assume that you already have the Powershell tools installed and your AWS credentials have been set up.
@@ -66,4 +67,4 @@ To send the mail you just need to execute the code below.
  Get-Content -Path ../myemail.json -Encoding UTF-8 | convertFrom-JSON | Send-SESTemplatedEmail
 ```
 
-**Congratulations for delivering your email via SES with Powershell! :-)**
+**Congratulations for delivering your email via SES with Powershell! 👍**
