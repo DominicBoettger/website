@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dominic Böttger`,
     name: `Dominic Böttger`,
-    siteUrl: `https://dominicboettger.de`,
+    siteUrl: `https://dominic-boettger.com`,
     description: `Dominic Böttger - Coder, Blogger`,
     hero: {
       heading: `Hi, I'm Dominic`,
@@ -25,6 +25,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-typescript`
+    },
+    {
       resolve: "@narative/gatsby-theme-novela",
       options: {
         contentPosts: "content/posts",
@@ -41,7 +44,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Dominic Böttger`,
-        short_name: `DBlog`,
+        short_name: `Dominic`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
@@ -54,5 +57,8 @@ module.exports = {
       options: {
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 };
