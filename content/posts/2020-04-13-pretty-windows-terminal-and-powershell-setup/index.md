@@ -523,7 +523,7 @@ Add-Module "z"
 Set-Theme Paradox
   
 # Nice colors for listings
-Import-Module "Get-ChildItemColor"
+Add-Module "Get-ChildItemColor"
 # Set l and ls alias to use the new Get-ChildItemColor cmdlets
 Set-Alias l Get-ChildItemColor -Option AllScope
 Set-Alias ls Get-ChildItemColorFormatWide -Option AllScope
