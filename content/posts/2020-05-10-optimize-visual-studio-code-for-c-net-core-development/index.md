@@ -13,14 +13,23 @@ Visual Studio Code is my favorite Code Editor and I like that it's so lightweigh
 Some time ago I tried to use Visual Studio Code instead but I was missing some things to improve the development workflow. I wanted to have features like live unit testing and better guidance while coding C#.  I tested some plugins and some configurations and now I think I found a solution to fulfill my needs.
 
 Some of the extensions I use:
+
 1. [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) - This is THE C# extension for Visual Studio Code powered by OmniSharp.
-2. [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) - An important extension to have live testing while coding in VScode.
+
+3. [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) - An important extension to have live testing while coding in VScode.
+
 4. [Auto-using](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) - Automatically adds the dependencies with using in the head of the current file.
+
 5. [C# FixFormat](https://marketplace.visualstudio.com/items?itemName=Leopotam.csharpfixformat) - It helps to automatically format the code. With the right settings, the code is also formatted when saving the file.
+
 6. [Coverage Gutters](https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters) - Show the code coverage visualized with color in the editor.
+
 7.  [.NET Core Extension Pack](https://marketplace.visualstudio.com/items?itemName=doggy8088.netcore-extension-pack) - Bundle of helpful extensions.
+
 8.  [.NET Core Snippet Pack](https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.asp-net-core-snippet-pack) - A pack of around 120 snippets for .NET Core.
+
 9.  [Fakesharper](https://marketplace.visualstudio.com/items?itemName=fakesharper.fakesharper) - Integrates Resharper into VSCode
+
 10. [EditorConfig](https://marketplace.visualstudio.com/items?itemName=Editorconfig.editorconfig) - Overwrites the VScode settings with the settings provided in the .editorconfig file.
 
 The extensions were one part of the solution.
