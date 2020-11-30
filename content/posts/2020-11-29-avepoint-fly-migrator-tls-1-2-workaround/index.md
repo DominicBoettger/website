@@ -3,8 +3,8 @@ title: AvePoint Fly Migrator TLS 1.2 workaround
 author: Dominic Böttger
 date: '2020-11-29'
 excerpt: >-
-  A workaround to connect AvePoint's Fly Migrator to an IMAP server which does
-  not support TLS versions < 1.2.
+  A workaround to enable TLS 1.2 support for IMAP migrations with AvePoint's Fly
+  Migrator.
 hero: images/aylin-cobanoglu-sp8uketm728-unsplash.jpg
 ---
 At our company ([INSPIRATIONLABS ](https://inspirationlabs.com)– New Work Technologies) we help our customers get the right infrastructure for their business and to make the lives of their employees better by giving them the right tools for their job. Sometimes it simply starts with the migration from an IMAP server to a cloud solution like Office 365.
